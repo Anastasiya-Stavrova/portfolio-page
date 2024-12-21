@@ -5,7 +5,14 @@ import "./Banner.css";
 import headerImg from "../../assets/img/header-img.svg";
 
 const Banner = () => {
-  const toRotate = ["JavaScript", "CSS", "Html", "TypeScript", "React"];
+  const toRotate = [
+    "JavaScript",
+    "CSS",
+    "Html",
+    "Bootstrap",
+    "TypeScript",
+    "React",
+  ];
   const period = 2000;
 
   const [loopNumber, setLoopNumber] = useState(0);
@@ -33,7 +40,7 @@ const Banner = () => {
     setText(updatedText);
 
     if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 1.5);
+      setDelta((prevDelta) => prevDelta / 2);
     }
 
     if (!isDeleting && updatedText === fullText) {
@@ -43,7 +50,6 @@ const Banner = () => {
       setIsDeleting(false);
       setLoopNumber(loopNumber + 1);
       setDelta(400);
-    } else {
     }
   };
 

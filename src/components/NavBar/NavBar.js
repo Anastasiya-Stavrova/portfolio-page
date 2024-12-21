@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./NavBar.css";
-import logo from "../../assets/img/logo.svg";
+import logo from "../../assets/img/web.svg";
 import navIcon1 from "../../assets/img/nav-icon1.svg";
 import navIcon2 from "../../assets/img/nav-icon2.svg";
 import navIcon3 from "../../assets/img/nav-icon3.svg";
@@ -32,7 +32,7 @@ const NavBar = () => {
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} alt="logo" />
+          <img className="logo-img" src={logo} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className="navbar-toggler-icon"></span>
@@ -70,13 +70,13 @@ const NavBar = () => {
           <span className="navbar-text">
             <div className="social-icons">
               <a href="#">
-                <img src={navIcon1} alt="" />
+                <img src={navIcon1} alt="vk" />
               </a>
               <a href="#">
-                <img src={navIcon2} alt="" />
+                <img src={navIcon2} alt="telegram" />
               </a>
               <a href="#">
-                <img src={navIcon3} alt="" />
+                <img src={navIcon3} alt="github" />
               </a>
             </div>
             <button onClick={() => console.log("contact")}>
