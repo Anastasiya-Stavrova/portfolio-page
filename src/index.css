@@ -17,7 +17,9 @@
 :root {
   --black-color: #121212;
   --white-color: #fff;
+  --grey-color: #b8b8b8;
   --transition: 0.5s ease-in-out;
+  --icon-border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 * {
@@ -49,4 +51,30 @@ h6 {
   margin: 0;
   padding: 0;
   line-height: normal;
+}
+
+p,
+a,
+li,
+button,
+ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
 }
