@@ -28,11 +28,11 @@ const Skills = () => {
   };
 
   return (
-    <section className="skills" id="skills">
+    <section className="skills">
       <Container>
         <Row>
           <Col>
-            <div className="skills-box">
+            <div className="skills-box" id="skills">
               <h2>My Soft Skills</h2>
               <p>
                 Soft skills are very important for every developer, so I try

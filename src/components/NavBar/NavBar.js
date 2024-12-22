@@ -87,7 +87,13 @@ const NavBar = () => {
                 <img src={navIcon3} alt="github" />
               </a>
             </div>
-            <button onClick={() => console.log("contact")}>
+            <button
+              onClick={() =>
+                document
+                  .querySelector("#connect")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
               <span>Let's Connect!</span>
             </button>
           </span>

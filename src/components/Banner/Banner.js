@@ -69,7 +69,13 @@ const Banner = () => {
               At the moment I'm studying at the second year of Tomsk State
               University, Faculty of Higher IT School.
             </p>
-            <button onClick={() => console.log("Click")}>
+            <button
+              onClick={() =>
+                document
+                  .querySelector("#connect")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
               Let's Connect! <ArrowRightCircle size={25} />
             </button>
           </Col>
