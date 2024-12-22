@@ -69,13 +69,21 @@ const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icons">
-              <a href="#">
+              <a
+                target="_blank"
+                href="https://vk.com/an_stavrova"
+                rel="noreferrer"
+              >
                 <img src={navIcon1} alt="vk" />
               </a>
-              <a href="#">
+              <a target="_blank" href="https://t.me/an_stavr" rel="noreferrer">
                 <img src={navIcon2} alt="telegram" />
               </a>
-              <a href="#">
+              <a
+                target="_blank"
+                href="https://github.com/Anastasiya-Stavrova"
+                rel="noreferrer"
+              >
                 <img src={navIcon3} alt="github" />
               </a>
             </div>

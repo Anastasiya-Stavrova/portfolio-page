@@ -23,11 +23,13 @@ nav.navbar .navbar-nav .nav-link.navbar-link {
   padding: 0 25px;
   font-size: 18px;
   opacity: 0.75;
+  transition: 0.3s ease-in-out;
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link:hover,
 nav.navbar .navbar-nav .nav-link.navbar-link:active {
   opacity: 1;
+  transform: scale(1.1);
 }
 
 span.navbar-text {

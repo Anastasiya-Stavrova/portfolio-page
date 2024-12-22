@@ -1,6 +1,6 @@
 .project-img-box {
   position: relative;
-  border-radius: 30px;
+  border-radius: 15px;
   overflow: hidden;
   margin-bottom: 24px;
 }
@@ -40,6 +40,7 @@
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1.1em;
+  font-style: italic;
 }
 
 .project-text span {
