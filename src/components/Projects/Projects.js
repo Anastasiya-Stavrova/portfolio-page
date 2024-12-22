@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import "./Projects.css";
 import ColorSharp from "./../../assets/img/color-sharp2.png";
-import { projects } from "../../consts/projects";
+import projects from "../../consts/projects";
 
 const Projects = () => {
   return (

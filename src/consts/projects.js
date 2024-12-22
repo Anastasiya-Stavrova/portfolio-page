@@ -22,4 +22,4 @@ const projects = [
   },
 ];
 
-export { projects };
+export default projects;
