@@ -1,4 +1,4 @@
-import { memo, useState } from "react";
+import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import formInitialDetails from "../../consts/formInitialDetails";
 import "./Contacts.css";
@@ -16,8 +16,8 @@ const Contacts = () => {
     });
   };
 
-  const submitHandler = async (event) => {
-    event.preventDefault();
+  const submitHandler = async (e) => {
+    e.preventDefault();
     setButtonText("Sending...");
 
     let response = await fetch("http://localhost:5000/contact", {
@@ -31,7 +31,7 @@ const Contacts = () => {
     setButtonText("Send");
     setFormDetails(formInitialDetails);
 
-    let result = response.json();
+    let result = await response.json();
 
     if (result.ok) {
       setStatus({ success: true, message: "Message sent successfully!" });

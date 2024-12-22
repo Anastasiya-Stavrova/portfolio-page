@@ -1,0 +1,66 @@
+.newsletter-box {
+  background: var(--white-color);
+  border-radius: 55px;
+  color: var(--black-color);
+  padding: 75px 55px;
+  margin-bottom: 80px;
+  margin-top: -122px;
+}
+
+.newsletter-box h3 {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.2em;
+}
+
+.new-email-box {
+  background: var(--white-color);
+  padding: 5px;
+  border-radius: 20px;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+}
+
+.new-email-box::before {
+  content: "";
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  border-radius: 20px;
+  position: absolute;
+  z-index: -1;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+}
+
+.new-email-box::after {
+  content: "";
+  background: var(--white-color);
+  border-radius: 20px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.new-email-box input {
+  width: 100%;
+  color: var(--black-color);
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+  padding: 0 15px;
+}
+
+.new-email-box button {
+  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
+  padding: 10px 35px;
+  color: var(--white-color);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border-radius: 18px;
+}

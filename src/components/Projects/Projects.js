@@ -38,8 +38,16 @@ const Projects = () => {
                     })}
                   </Row>
                 </Tab.Pane>
-                <Tab.Pane eventKey={"second"}>*****</Tab.Pane>
-                <Tab.Pane eventKey={"third"}>*****</Tab.Pane>
+                <Tab.Pane eventKey={"second"}>
+                  <Row>
+                    <p>More projects coming up here soon!</p>
+                  </Row>
+                </Tab.Pane>
+                <Tab.Pane eventKey={"third"}>
+                  <Row>
+                    <p>More projects coming up here soon!</p>
+                  </Row>
+                </Tab.Pane>
               </Tab.Content>
             </Tab.Container>
           </Col>
