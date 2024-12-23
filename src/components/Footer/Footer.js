@@ -1,16 +1,16 @@
 import { Container, Row, Col } from "react-bootstrap";
-import MailchimpForm from "../MailchimpForm/MailchimpForm.js";
 import "./Footer.css";
 import navIcon1 from "../../assets/img/nav-icon1.svg";
 import navIcon2 from "../../assets/img/nav-icon2.svg";
 import navIcon3 from "../../assets/img/nav-icon3.svg";
+import Newsletter from "../Newsletter/Newsletter.js";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <Container>
         <Row className="align-items-center">
-          <MailchimpForm />
+          <Newsletter />
           <Col sm={12} className="text-center text-sm-end">
             <div className="social-icons">
               <a

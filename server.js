@@ -1,5 +1,9 @@
 require("dotenv").config();
 
+const MongoClient = require("mongodb").MongoClient;
+const url = `mongodb://${process.env.MONGO_DB_URL}/`;
+const mongoClient = new MongoClient(url);
+
 const express = require("express");
 const router = express.Router();
 const cors = require("cors");
@@ -53,4 +57,37 @@ router.post("/contact", (req, res) => {
       res.json({ code: 200, status: "Message Sent" });
     }
   });
+});
+
+router.post("/subscribe", (req, res) => {
+  const SubscribersHandler = async (email) => {
+    try {
+      await mongoClient.connect();
+
+      const db = mongoClient.db("FormsDetailsDB");
+      const collection = db.collection("subscribers");
+
+      try {
+        const subscriber = { email: email };
+        const result = await collection.insertOne(subscriber);
+        console.log(result);
+        res.json({
+          code: 200,
+          status: "success",
+          message: "Subscription successful!",
+        });
+      } catch (err) {
+        res.json({ error: "error", message: err });
+        console.log(err);
+      }
+    } catch (err) {
+      console.log("Возникла ошибка");
+      console.log(err);
+    } finally {
+      await mongoClient.close();
+      console.log("Подключение закрыто");
+    }
+  };
+
+  SubscribersHandler(req.body.email);
 });

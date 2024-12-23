@@ -19,6 +19,7 @@
 - react-bootstrap
 - react-bootstrap-icons
 - react-multi-carousel
+- mongoose
 
 Ресурс [link](https://youtu.be/hYv6BM2fWd8?si=GqNyq2UoEkC-7q-T).<br/>
 Исходники доступны по ссылке под видео.
