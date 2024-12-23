@@ -4,18 +4,21 @@
 
 <div align="center">
   <img src="./src/assets/readme/screen1.png" alt="Developer Information">
+  <img src="./src/assets/readme/screen2.png" alt="Developer Soft Skills">
+  <img src="./src/assets/readme/screen3.png" alt="Developer Projects">
+  <img src="./src/assets/readme/screen4.png" alt="Get In Touch With Developer">
 </div>
 
 ### :hammer_and_wrench: Технологии, используемые в проекте:
 
-- React
+- react
 - express
 - dotenv
 - cors
-- react-bootstrap-icons
 - nodemailer
 - react-bootstrap
+- react-bootstrap-icons
 - react-multi-carousel
 
-Ресурс [text](https://youtu.be/hYv6BM2fWd8?si=GqNyq2UoEkC-7q-T).
+Ресурс [link](https://youtu.be/hYv6BM2fWd8?si=GqNyq2UoEkC-7q-T).<br/>
 Исходники доступны по ссылке под видео.
