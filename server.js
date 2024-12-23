@@ -77,12 +77,13 @@ router.post("/subscribe", (req, res) => {
           message: "Subscription successful!",
         });
       } catch (err) {
-        res.json({ error: "error", message: err });
+        res.json({ status: "error", message: "An error occurred." });
         console.log(err);
       }
     } catch (err) {
       console.log("Возникла ошибка");
       console.log(err);
+      res.json({ status: "error", message: "An error occurred." });
     } finally {
       await mongoClient.close();
       console.log("Подключение закрыто");

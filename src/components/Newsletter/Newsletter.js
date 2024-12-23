@@ -28,6 +28,7 @@ const Newsletter = () => {
     }
 
     const data = await response.json();
+    console.log(data);
     setMessage(data.message);
     setStatus(data.status);
   };
