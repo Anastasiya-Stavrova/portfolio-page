@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import formInitialDetails from "../../consts/formInitialDetails";
+import PhoneFormater from "../../utils/PhoneFormater";
 import "./Contacts.css";
 import contactImg from "../../assets/img/contact-img.svg";
 
@@ -31,9 +32,9 @@ const Contacts = () => {
     setButtonText("Send");
     setFormDetails(formInitialDetails);
 
-    let result = await response.json();
+    console.log(response);
 
-    if (result.ok) {
+    if (response.ok) {
       setStatus({ success: true, message: "Message sent successfully!" });
     } else {
       setStatus({
@@ -83,7 +84,12 @@ const Contacts = () => {
                     type="tel"
                     value={formDetails.phone}
                     placeholder="Phone Number"
-                    onChange={(e) => onFormUpdate("phone", e.target.value)}
+                    onInput={(e) =>
+                      onFormUpdate(
+                        "phone",
+                        PhoneFormater.setPhoneNumber(e.target.value)
+                      )
+                    }
                   />
                 </Col>
                 <Col>
@@ -93,17 +99,15 @@ const Contacts = () => {
                     placeholder="Message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
                   />
+                  {status.message && (
+                    <p className={status.success ? "success" : "danger"}>
+                      {status.message}
+                    </p>
+                  )}
                   <button type="submit">
                     <span>{buttonText}</span>
                   </button>
                 </Col>
-                {status.message && (
-                  <Col>
-                    <p className={status.success ? "success" : "danger"}>
-                      {status.message}
-                    </p>
-                  </Col>
-                )}
               </Row>
             </form>
           </Col>
