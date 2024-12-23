@@ -19,7 +19,12 @@ const Contacts = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    setStatus({});
     setButtonText("Sending...");
+
+    if (formDetails.phone === "+7 (") {
+      formDetails.phone = "";
+    }
 
     let response = await fetch("http://localhost:5000/contact", {
       method: "POST",
@@ -30,9 +35,7 @@ const Contacts = () => {
     });
 
     setButtonText("Send");
-    setFormDetails(formInitialDetails);
-
-    console.log(response);
+    setFormDetails({ ...formDetails, message: "" });
 
     if (response.ok) {
       setStatus({ success: true, message: "Message sent successfully!" });
@@ -57,6 +60,8 @@ const Contacts = () => {
               <Row>
                 <Col sm={6} className="px-1">
                   <input
+                    required
+                    title="Fill in this field"
                     type="text"
                     value={formDetails.firstName}
                     placeholder="First Name"
@@ -73,7 +78,9 @@ const Contacts = () => {
                 </Col>
                 <Col sm={6} className="px-1">
                   <input
+                    required
                     type="email"
+                    title="Fill in this field"
                     value={formDetails.email}
                     placeholder="Email"
                     onChange={(e) => onFormUpdate("email", e.target.value)}
@@ -84,6 +91,10 @@ const Contacts = () => {
                     type="tel"
                     value={formDetails.phone}
                     placeholder="Phone Number"
+                    pattern=".{18}|.{4}"
+                    title="Enter your full phone number.
+                    If you want to skip this field,
+                    leave it as «+7 (»"
                     onInput={(e) =>
                       onFormUpdate(
                         "phone",
@@ -95,6 +106,8 @@ const Contacts = () => {
                 <Col>
                   <textarea
                     rows={6}
+                    required
+                    title="Fill in this field"
                     value={formDetails.message}
                     placeholder="Message"
                     onChange={(e) => onFormUpdate("message", e.target.value)}
