@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Небольшой проект по созданию сайта-портфолио.
+A small project to create a portfolio website.
 
 <div align="center">
   <img src="./src/assets/readme/screen1.png" alt="Developer Information">
@@ -9,7 +9,7 @@
   <img src="./src/assets/readme/screen4.png" alt="Get In Touch With Developer">
 </div>
 
-### :hammer_and_wrench: Технологии, используемые в проекте:
+### :hammer_and_wrench: Technologies used in the project:
 
 - react
 - express
@@ -21,5 +21,5 @@
 - react-multi-carousel
 - mongoose
 
-Ресурс [link](https://youtu.be/hYv6BM2fWd8?si=GqNyq2UoEkC-7q-T).<br/>
-Исходники доступны по ссылке под видео.
+Resource [link](https://youtu.be/hYv6BM2fWd8?si=GqNyq2UoEkC-7q-T).<br/>
+The source code is available at the link below the video.
