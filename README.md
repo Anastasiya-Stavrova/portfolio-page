@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A small project to create a portfolio website.
+### A small project to create a portfolio website.
 
 <div align="center">
   <img src="./src/assets/readme/screen1.png" alt="Developer Information">
