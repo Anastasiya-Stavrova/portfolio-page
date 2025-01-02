@@ -22,4 +22,4 @@ A small project to create a portfolio website.
 - mongoose
 
 Resource [link](https://youtu.be/hYv6BM2fWd8?si=GqNyq2UoEkC-7q-T).<br/>
-The source code is available at the link below the video.
+Source code and resources are available at the link below the video.
